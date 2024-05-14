@@ -4,8 +4,7 @@ module Resolvers
     argument :id, ID
 
     def resolve(id:)
-      # ::Post.find(id)
-      OpenStruct.new(id: 1, title: "Hello, title", truncated_preview: "Demo graphql query", comments: [OpenStruct.new(id: 1, body: "Nice demo", post_id: 1)])
+      Post.find(id)
     end
   end
 end

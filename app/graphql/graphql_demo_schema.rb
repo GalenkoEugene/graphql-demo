@@ -20,7 +20,8 @@ class GraphqlDemoSchema < GraphQL::Schema
   def self.resolve_type(abstract_type, obj, ctx)
     # TODO: Implement this method
     # to return the correct GraphQL object type for `obj`
-    raise(GraphQL::RequiredImplementationMissingError)
+    # raise(GraphQL::RequiredImplementationMissingError)
+    abstract_type
   end
 
   # Limit the size of incoming queries:
