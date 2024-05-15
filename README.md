@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Add graphql-ruby boilerplate and mount graphiql in development
+```bash
+rails g graphql:install
+```
+### You may need to run bundle install again, as by default graphiql-rails is added on installation.
+```bash
+bundle install
+```
+### Make your first object type
+```bash
+rails g graphql:object Post title:String rating:Int comments:[Comment]
+```
+w
