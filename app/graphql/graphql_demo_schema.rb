@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class GraphqlDemoSchema < GraphQL::Schema
+  include ApolloFederation::Schema
+  federation version: '2.3'
+
   mutation(Types::MutationType)
   query(Types::QueryType)
 

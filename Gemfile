@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "graphql"
+gem "apollo-federation"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -60,6 +61,7 @@ group :development do
   gem "web-console"
   gem "rubocop", require: false
   gem "pry"
+  gem "graphiql-rails"
 
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -75,4 +77,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "graphiql-rails", group: :development
