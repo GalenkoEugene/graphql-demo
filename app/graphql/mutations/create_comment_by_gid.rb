@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 module Mutations
-  class CreateComment < Mutations::BaseMutation
+  class CreateCommentByGid < Mutations::BaseMutation
     null true
     argument :body, String
-    argument :post_id, ID, loads: Types::PostType, as: :post # works only with global_id (take a look at GraphqlDemoSchema#object_from_id)
-
-    # in next case resolver will be "resolve(body:, post_id:)". And manually we could find a post "Post.find(post_id)"
-    # argument :post_id, ID
+    argument :post_gid, ID, loads: Types::PostType, as: :post # works only with global_id (take a look at GraphqlDemoSchema#object_from_id)
 
     field :comment, Types::CommentType
     field :errors, [String], null: false

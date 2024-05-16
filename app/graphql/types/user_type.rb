@@ -10,10 +10,7 @@ module Types
     field :id, ID, external: true,
                    description: "User's ID"
     field :comments, [Types::CommentType], null: false,
-                                           description: "User's comments on posts"
-
-    def comments
-      Comment.where(post_id: object.id) # TODO: should be user_id
-    end
+                                           description: "User's comments on posts",
+                                           resolver: Resolvers::UserCommentsResolver
   end
 end

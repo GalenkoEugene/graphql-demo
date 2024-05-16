@@ -27,7 +27,7 @@ module Types
 
     def user(id:)
       # This is a hack to fix "Failed to implement Query.user"
-      OpenStruct.new(id: id)
+      { __typename: 'User', id: id }
     end
   end
 end
