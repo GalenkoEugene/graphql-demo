@@ -68,6 +68,9 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    apollo-federation (3.8.5)
+      google-protobuf (~> 3.22)
+      graphql (>= 1.10.14)
     ast (2.4.2)
     base64 (0.2.0)
     bindex (0.8.1)
@@ -93,6 +96,7 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (3.25.3-x86_64-darwin)
     graphiql-rails (1.10.0)
       railties
     graphql (2.3.3)
@@ -250,6 +254,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  apollo-federation
   bootsnap
   capybara
   debug
