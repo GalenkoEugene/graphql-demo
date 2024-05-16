@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+module Types
+  class PostType < Types::BaseObject
+    description "A blog post"
+    key fields: :id
+
+    field :id, ID, null: false
+    field :gid, String, null: false
+    field :title, String, null: false
+    # fields should be queried in camel-case (this will be `truncatedPreview`)
+    field :truncated_preview, String, null: false
+    # Fields can return lists of other objects:
+    field :comments, [Types::CommentType],
+          # And fields can have their own descriptions:
+          description: "This post's comments, or null if this post has comments disabled."
+  end
+end
